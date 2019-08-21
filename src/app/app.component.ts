@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
 import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
-import { NavigationCancel,
-        Event,
-        NavigationEnd,
-        NavigationError,
-        NavigationStart,
-        Router } from '@angular/router';
-        
+import { NavigationCancel,Event,NavigationEnd,NavigationError,NavigationStart,Router } from '@angular/router';
+import { BusinessService } from './business.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ BusinessService ],
 })
 export class AppComponent {
   title = 'angular';
